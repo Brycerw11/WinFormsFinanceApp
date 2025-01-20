@@ -22,6 +22,35 @@ namespace WinFormsFinanceApp
 
         }
 
+        //Create File Section
+        private void createFileBttn_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void newFileNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            //Updates file path label
+            if (newFilePathLabel.Text != string.Empty && newFileNameTextBox.Text != string.Empty)
+            {
+                newFilePathLabel.Text = newFileLocationTextBox.Text + @"\" + newFileNameTextBox.Text + ".insertfileextensionhere";
+            }
+        }
+        private void chooseFileLocationBttn_Click(object sender, EventArgs e)
+        {
+            if(newFileLocationFolderDialog.ShowDialog() == DialogResult.OK)
+            {
+                newFileLocationTextBox.Text = newFileLocationFolderDialog.SelectedPath;
+                //Updates file path label
+                if (newFilePathLabel.Text != string.Empty && newFileNameTextBox.Text != string.Empty)
+                {
+                    newFilePathLabel.Text = newFileLocationTextBox.Text + @"\" + newFileNameTextBox.Text + ".insertfileextensionhere";
+                }
+            }
+        }
+
+
+        //Open File Section
+        //button1 is the "Choose File" button
         private void button1_Click(object sender, EventArgs e)
         {
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -47,5 +76,17 @@ namespace WinFormsFinanceApp
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
