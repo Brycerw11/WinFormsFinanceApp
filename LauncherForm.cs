@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace WinFormsFinanceApp
 
         private void LauncherForm_Load(object sender, EventArgs e)
         {
-
+            newFileNameTextBox.Text = Path.GetFileNameWithoutExtension(newFileDialog.FileName);
         }
 
         //Create File Section
@@ -30,21 +31,20 @@ namespace WinFormsFinanceApp
         private void newFileNameTextBox_TextChanged(object sender, EventArgs e)
         {
             //Updates file path label
-            if (newFilePathLabel.Text != string.Empty && newFileNameTextBox.Text != string.Empty)
+            if (newFileNameTextBox.Text != string.Empty)
             {
-                newFilePathLabel.Text = newFileLocationTextBox.Text + @"\" + newFileNameTextBox.Text + ".insertfileextensionhere";
+                newFileDialog.FileName = newFileNameTextBox.Text;
             }
         }
         private void chooseFileLocationBttn_Click(object sender, EventArgs e)
         {
-            if(newFileLocationFolderDialog.ShowDialog() == DialogResult.OK)
+            if(newFileDialog.ShowDialog() == DialogResult.OK)
             {
-                newFileLocationTextBox.Text = newFileLocationFolderDialog.SelectedPath;
-                //Updates file path label
-                if (newFilePathLabel.Text != string.Empty && newFileNameTextBox.Text != string.Empty)
-                {
-                    newFilePathLabel.Text = newFileLocationTextBox.Text + @"\" + newFileNameTextBox.Text + ".insertfileextensionhere";
-                }
+                //Update File Path Text
+                newChosenFilePath.Text = newFileDialog.FileName;
+
+                //Update File Name Text Box
+                newFileNameTextBox.Text = Path.GetFileNameWithoutExtension(newFileDialog.FileName);
             }
         }
 
@@ -56,9 +56,12 @@ namespace WinFormsFinanceApp
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 //sets the file path text box to the selected path
-                openFileTextBox.Text = openFileDialog.FileName;
+                openChosenFilePath.Text = openFileDialog.FileName;
             }
         }
+
+
+
 
 
         //Unused references
@@ -87,6 +90,14 @@ namespace WinFormsFinanceApp
 
         }
 
+        private void label2_Click_1(object sender, EventArgs e)
+        {
 
+        }
+
+        private void newFileDialog_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }
