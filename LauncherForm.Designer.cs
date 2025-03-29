@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.openFileGroupBox = new System.Windows.Forms.GroupBox();
             this.openChosenFilePath = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@
             this.filePathLabel = new System.Windows.Forms.Label();
             this.newFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.moneyMageFullLogo = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.openFileGroupBox.SuspendLayout();
             this.newFileGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moneyMageFullLogo)).BeginInit();
@@ -265,6 +267,7 @@
         private System.Windows.Forms.Label newChosenFilePath;
         private System.Windows.Forms.Label openChosenFilePath;
         private System.Windows.Forms.PictureBox moneyMageFullLogo;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

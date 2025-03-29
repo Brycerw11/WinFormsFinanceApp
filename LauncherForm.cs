@@ -21,8 +21,11 @@ namespace WinFormsFinanceApp
 
         private void LauncherForm_Load(object sender, EventArgs e)
         {
+            // get starting File Path
             newFileNameTextBox.Text = Path.GetFileNameWithoutExtension(newFileDialog.FileName);
-            Debug.WriteLine(newFileNameTextBox.Text);
+
+            //Load Tooltips
+            toolTip1.SetToolTip(this.newChosenFilePath, newFileNameTextBox.Text);
         }
 
         // Go to properties panel and click on view events to access event calls
@@ -85,6 +88,8 @@ namespace WinFormsFinanceApp
             {
                 //Update File Path Text
                 newChosenFilePath.Text = newFileDialog.FileName;
+                //Update File Path Tooltip
+                toolTip1.SetToolTip(this.newChosenFilePath, newFileDialog.FileName);
 
                 //Update File Name Text Box
                 newFileNameTextBox.Text = Path.GetFileNameWithoutExtension(newFileDialog.FileName);
@@ -108,10 +113,6 @@ namespace WinFormsFinanceApp
 
 
         //Unused references
-        private void selectedFilePanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
