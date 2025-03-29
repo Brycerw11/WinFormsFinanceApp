@@ -21,7 +21,11 @@ namespace WinFormsFinanceApp
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LauncherForm());
+            LauncherForm launchForm = new LauncherForm();
+            launchForm.Show();
+
+            // The application is seperate from the Forms
+            Application.Run(); 
         }
 
         //Retrieves user32.dll which can be used to get dpi settings

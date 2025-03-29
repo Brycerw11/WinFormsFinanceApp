@@ -30,19 +30,19 @@
         {
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.openFileGroupBox = new System.Windows.Forms.GroupBox();
+            this.openChosenFilePath = new System.Windows.Forms.Label();
             this.recentFilesListBox = new System.Windows.Forms.ListBox();
             this.openFileBttn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.newFileGroupBox = new System.Windows.Forms.GroupBox();
+            this.newChosenFilePath = new System.Windows.Forms.Label();
             this.newFileNameTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.createFileBttn = new System.Windows.Forms.Button();
             this.chooseFileLocationBttn = new System.Windows.Forms.Button();
             this.filePathLabel = new System.Windows.Forms.Label();
             this.newFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.newChosenFilePath = new System.Windows.Forms.Label();
-            this.openChosenFilePath = new System.Windows.Forms.Label();
             this.moneyMageFullLogo = new System.Windows.Forms.PictureBox();
             this.openFileGroupBox.SuspendLayout();
             this.newFileGroupBox.SuspendLayout();
@@ -68,6 +68,18 @@
             this.openFileGroupBox.TabIndex = 0;
             this.openFileGroupBox.TabStop = false;
             this.openFileGroupBox.Text = "Open File";
+            // 
+            // openChosenFilePath
+            // 
+            this.openChosenFilePath.AutoEllipsis = true;
+            this.openChosenFilePath.AutoSize = true;
+            this.openChosenFilePath.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.openChosenFilePath.Location = new System.Drawing.Point(154, 54);
+            this.openChosenFilePath.MaximumSize = new System.Drawing.Size(500, 50);
+            this.openChosenFilePath.Name = "openChosenFilePath";
+            this.openChosenFilePath.Size = new System.Drawing.Size(212, 30);
+            this.openChosenFilePath.TabIndex = 11;
+            this.openChosenFilePath.Text = "No File Path Provided";
             // 
             // recentFilesListBox
             // 
@@ -127,6 +139,19 @@
             this.newFileGroupBox.TabIndex = 1;
             this.newFileGroupBox.TabStop = false;
             this.newFileGroupBox.Text = "New File";
+            // 
+            // newChosenFilePath
+            // 
+            this.newChosenFilePath.AutoEllipsis = true;
+            this.newChosenFilePath.AutoSize = true;
+            this.newChosenFilePath.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.newChosenFilePath.Location = new System.Drawing.Point(151, 119);
+            this.newChosenFilePath.MaximumSize = new System.Drawing.Size(500, 50);
+            this.newChosenFilePath.Name = "newChosenFilePath";
+            this.newChosenFilePath.Size = new System.Drawing.Size(212, 30);
+            this.newChosenFilePath.TabIndex = 10;
+            this.newChosenFilePath.Text = "No File Path Provided";
+            this.newChosenFilePath.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // newFileNameTextBox
             // 
@@ -189,31 +214,6 @@
             this.newFileDialog.Title = "Create a new Financial Book file";
             this.newFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.newFileDialog_FileOk);
             // 
-            // newChosenFilePath
-            // 
-            this.newChosenFilePath.AutoEllipsis = true;
-            this.newChosenFilePath.AutoSize = true;
-            this.newChosenFilePath.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.newChosenFilePath.Location = new System.Drawing.Point(151, 119);
-            this.newChosenFilePath.MaximumSize = new System.Drawing.Size(500, 50);
-            this.newChosenFilePath.Name = "newChosenFilePath";
-            this.newChosenFilePath.Size = new System.Drawing.Size(212, 30);
-            this.newChosenFilePath.TabIndex = 10;
-            this.newChosenFilePath.Text = "No File Path Provided";
-            this.newChosenFilePath.Click += new System.EventHandler(this.label2_Click_1);
-            // 
-            // openChosenFilePath
-            // 
-            this.openChosenFilePath.AutoEllipsis = true;
-            this.openChosenFilePath.AutoSize = true;
-            this.openChosenFilePath.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.openChosenFilePath.Location = new System.Drawing.Point(154, 54);
-            this.openChosenFilePath.MaximumSize = new System.Drawing.Size(500, 50);
-            this.openChosenFilePath.Name = "openChosenFilePath";
-            this.openChosenFilePath.Size = new System.Drawing.Size(212, 30);
-            this.openChosenFilePath.TabIndex = 11;
-            this.openChosenFilePath.Text = "No File Path Provided";
-            // 
             // moneyMageFullLogo
             // 
             this.moneyMageFullLogo.Location = new System.Drawing.Point(214, 12);
@@ -237,6 +237,7 @@
             this.MinimumSize = new System.Drawing.Size(1000, 800);
             this.Name = "LauncherForm";
             this.Text = "Money Mage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LauncherForm_FormClosed);
             this.Load += new System.EventHandler(this.LauncherForm_Load);
             this.openFileGroupBox.ResumeLayout(false);
             this.openFileGroupBox.PerformLayout();
