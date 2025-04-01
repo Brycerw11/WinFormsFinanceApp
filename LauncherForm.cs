@@ -65,8 +65,8 @@ namespace WinFormsFinanceApp
 
             // Set up a new Form for the book
             BookForm newBook = new BookForm();
+            newBook.bookName = Path.GetFileNameWithoutExtension(path);
             newBook.bookFilePath = path;
-            newBook.Text = Path.GetFileNameWithoutExtension(path) + " - Money Mage";
             
             // Show the new Form
             newBook.Show();
