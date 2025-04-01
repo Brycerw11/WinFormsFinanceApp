@@ -46,6 +46,8 @@
             this.newFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.moneyMageFullLogo = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.openFileGroupBox.SuspendLayout();
             this.newFileGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moneyMageFullLogo)).BeginInit();
@@ -66,7 +68,7 @@
             this.openFileGroupBox.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.openFileGroupBox.Location = new System.Drawing.Point(75, 327);
             this.openFileGroupBox.Name = "openFileGroupBox";
-            this.openFileGroupBox.Size = new System.Drawing.Size(869, 398);
+            this.openFileGroupBox.Size = new System.Drawing.Size(869, 344);
             this.openFileGroupBox.TabIndex = 0;
             this.openFileGroupBox.TabStop = false;
             this.openFileGroupBox.Text = "Open File";
@@ -90,13 +92,13 @@
             this.recentFilesListBox.ItemHeight = 30;
             this.recentFilesListBox.Location = new System.Drawing.Point(44, 110);
             this.recentFilesListBox.Name = "recentFilesListBox";
-            this.recentFilesListBox.Size = new System.Drawing.Size(788, 214);
+            this.recentFilesListBox.Size = new System.Drawing.Size(788, 154);
             this.recentFilesListBox.TabIndex = 4;
             // 
             // openFileBttn
             // 
             this.openFileBttn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.openFileBttn.Location = new System.Drawing.Point(360, 333);
+            this.openFileBttn.Location = new System.Drawing.Point(362, 280);
             this.openFileBttn.Name = "openFileBttn";
             this.openFileBttn.Size = new System.Drawing.Size(153, 53);
             this.openFileBttn.TabIndex = 3;
@@ -224,11 +226,33 @@
             this.moneyMageFullLogo.TabIndex = 2;
             this.moneyMageFullLogo.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.button2.Location = new System.Drawing.Point(737, 677);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(228, 48);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "View Legal Information";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(360, 688);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(314, 30);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "MoneyMage © 2025 Bryce Wahl";
+            // 
             // LauncherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(168F, 168F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(976, 736);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.moneyMageFullLogo);
             this.Controls.Add(this.newFileGroupBox);
             this.Controls.Add(this.openFileGroupBox);
@@ -247,6 +271,7 @@
             this.newFileGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moneyMageFullLogo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -268,6 +293,8 @@
         private System.Windows.Forms.Label openChosenFilePath;
         private System.Windows.Forms.PictureBox moneyMageFullLogo;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
     }
 }
 

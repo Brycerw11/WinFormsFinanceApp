@@ -65,6 +65,12 @@
     <Compile Include="LauncherForm.Designer.cs">
       <DependentUpon>LauncherForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LegalInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LegalInfoForm.Designer.cs">
+      <DependentUpon>LegalInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BookForm.resx">
@@ -75,6 +81,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LauncherForm.resx">
       <DependentUpon>LauncherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LegalInfoForm.resx">
+      <DependentUpon>LegalInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

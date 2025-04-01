@@ -108,6 +108,13 @@ namespace WinFormsFinanceApp
             }
         }
 
+        //Legal Information Button
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LegalInfoForm legalForm = new LegalInfoForm();
+            legalForm.Show();
+        }
+
 
 
 

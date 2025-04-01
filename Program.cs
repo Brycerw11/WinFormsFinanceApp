@@ -12,6 +12,7 @@ namespace WinFormsFinanceApp
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+
         static void Main()
         {
             if(Environment.OSVersion.Version.Major >= 6)
@@ -21,6 +22,7 @@ namespace WinFormsFinanceApp
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //LauncherForm launchForm = new LauncherForm();
             LauncherForm launchForm = new LauncherForm();
             launchForm.Show();
 
